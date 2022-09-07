@@ -14,7 +14,7 @@
             id: 2,
             blogImg: "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
             category: "Tech",
-            title: "Bost your Redux Skill with LWS",
+            title: "Boost your Redux Skill with LWS",
             authorImg: " https://avatars.githubusercontent.com/u/73503432?v=4", 
             authorName: " Learn With Sumit"         
     },
@@ -40,7 +40,7 @@
             id: 5,
             blogImg: "https://images.unsplash.com/photo-1496128858413-b36217c2ce36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1679&q=80",
             category: "Tech",
-            title: "Bost your Redux Skill with LWS",
+            title: "Boost your Redux Skill with LWS",
             authorImg: " https://avatars.githubusercontent.com/u/73503432?v=4", 
             authorName: " Learn With Sumit"         
     },
