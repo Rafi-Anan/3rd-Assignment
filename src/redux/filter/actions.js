@@ -1,4 +1,4 @@
-import {AUTHORNAME_FILTER, CATAGORY_FILTER, SEARCH_FILTER} from "./actionType";
+import {AUTHORNAME_FILTER, CATAGORY_FILTER, SEARCH_FILTER, RESET} from "./actionType";
 
 export const authorName = (authorFilter) => {
     return {
@@ -19,6 +19,13 @@ export const search = (searchFilter) => {
         type: SEARCH_FILTER,
         payload: searchFilter,
 
+    }
+}
+
+export const reset = () => {
+    return{
+        type: RESET,
+    
     }
 }
 

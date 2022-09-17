@@ -1,4 +1,4 @@
-import {AUTHORNAME_FILTER, CATAGORY_FILTER, SEARCH_FILTER} from "./actionType";
+import {AUTHORNAME_FILTER, CATAGORY_FILTER, SEARCH_FILTER, RESET} from "./actionType";
 import initialState from "./initialState";
 
 const reducer = (state = initialState, action) => {
@@ -21,6 +21,13 @@ const reducer = (state = initialState, action) => {
             ...state,
             searchFilter: action.payload,
     
+            }
+        case RESET:
+            return {
+                ...state,
+                authorFilter: "",
+                categoryFilter: "",
+                searchFilter: "",
             }
 
             default: 

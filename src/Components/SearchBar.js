@@ -10,18 +10,20 @@ const SearchBar = () => {
 
     const dispatch = useDispatch()
 
-    const handleDebounced = ( fn, wait) => {
+    const handleDebounced = ( func, wait) => {
         let timeout;
         return (...args) => {
             clearTimeout( timeout);
             timeout = setTimeout( () => {
-                fn (...args);
+                func (...args);
             }, wait);
         }
 
     }
 const getSearchKey = (value) => {
     dispatch(search(value))
+ 
+
 }
 
 const getDebouncedKey = handleDebounced(getSearchKey, 500)
@@ -36,6 +38,7 @@ const getDebouncedKey = handleDebounced(getSearchKey, 500)
                 name="search"
                 onChange = {(e) => getDebouncedKey(e.target.value)}
                 placeholder="Search"
+                
             />
             <img
                 className="inline h-6 cursor-pointer"

@@ -47,7 +47,7 @@ dispatch(authorName(authorFilter))
                             src={blog.authorImg} alt="" />
                     </div>
                     <div className="ml-3">
-                        <p className="text-sm font-medium text-gray-900 hover:underline cursor-pointer" onClick={ (e) => authorFilterHandaler(blog.authorName)}> {blog.authorName}</p>
+                        <p className="text-sm font-medium text-gray-900 hover:underline cursor-pointer" onClick={ () => authorFilterHandaler(blog.authorName)}> {blog.authorName}</p>
                         <div id='minText'
                             className="flex space-x-1
                                 text-sm text-gray-500"

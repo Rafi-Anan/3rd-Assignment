@@ -1,5 +1,6 @@
 import React from 'react'
-import { useSelector }  from "react-redux"
+import { useSelector, useDispatch }  from "react-redux"
+import { reset } from '../redux/filter/actions'
 
 import Blogs from "./Blogs"
 import Heading from './Heading'
@@ -8,6 +9,7 @@ import allBlogs from './blogData';
 
 
 const BlogSection = () => {
+    const dispatch = useDispatch()
 
 
 
@@ -18,14 +20,17 @@ const { authorFilter, searchFilter, categoryFilter } = reducer
 
 const style = `${authorFilter || searchFilter || categoryFilter? "ml-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" : " hidden "  }`;
 
-const resetHandeler = () => { window.location.reload()}
+const resetHandeler = () => { 
+    dispatch(reset())
+}
 
 
 const filterBySearch = (blog) => {
 
     return searchFilter?
-    blog.title.toLowerCase().includes(searchFilter.toLowerCase())
+    blog.title.toLowerCase().includes(searchFilter.toLowerCase()) 
      : blog
+     
 
 }
 
